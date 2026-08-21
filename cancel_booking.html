@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Booking - Shantubag Agro Tourism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #81c784, #388e3c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .cancel-container {
+      background: #fff;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      max-width: 500px;
+      width: 100%;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #2e7d32;
+    }
+
+    p.sub-text {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: #fafafa;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #388e3c;
+      background: #f1fff4;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 90px;
+    }
+
+    .checkbox-group {
+      margin-top: 12px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #444;
+    }
+
+    button {
+      width: 100%;
+      background: #388e3c;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+      background: #2e7d32;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="cancel-container">
+    <h2>Cancel Booking</h2>
+    <p class="sub-text">We’re sorry to see you go. Please provide your booking details below.</p>
+    
+    <form action="cancel_booking.php" method="POST">
+      <div class="form-group">
+        <label for="booking_id">Booking ID *</label>
+        <input type="number" name="booking_id" id="booking_id" required placeholder="Enter your booking ID">
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason for Cancellation *</label>
+        <select name="reason" id="reason" required>
+          <option value="">-- Select Reason --</option>
+          <option value="Personal Reason">Personal Reason</option>
+          <option value="Change of Plans">Change of Plans</option>
+          <option value="Medical Emergency">Medical Emergency</option>
+          <option value="Weather Issues">Weather Issues</option>
+          <option value="Found Better Option">Found Better Option</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments (Optional)</label>
+        <textarea name="comments" id="comments" placeholder="Tell us more if you’d like..."></textarea>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" name="request_refund" value="yes">
+          I would like to request a refund (if applicable).
+        </label>
+      </div>
+
+      <button type="submit">Submit Cancellation</button>
+    </form>
+  </div>
+</body>
+</html>

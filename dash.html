@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - Shantubag Agro Tourism</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #388e3c;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== CONTAINER & SECTIONS ===== */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #2e7d32;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #388e3c;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .btn:hover {
+      background: #2e7d32;
+    }
+
+    /* ===== GRID LAYOUT ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Welcome, Manasi!</h1>
+    <nav>
+      <a href="#">Edit Profile</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- ===== BOOKING SUMMARY ===== -->
+    <section class="section" id="booking-summary">
+      <h2>Your Bookings</h2>
+      <div class="card">
+        <strong>Package:</strong> Farm Stay Deluxe<br>
+        <strong>Dates:</strong> 15 Aug - 17 Aug 2025<br>
+        <strong>Status:</strong> Approved ✅
+      </div>
+      <div class="card">
+        <strong>Package:</strong> Nature & Adventure Tour<br>
+        <strong>Dates:</strong> 1 Sep - 3 Sep 2025<br>
+        <strong>Status:</strong> Requested ⏳
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES ===== -->
+    <section class="section" id="available-packages">
+      <h2>Available Packages</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Farm Stay Deluxe</h3>
+          Price: ₹2,500 / night<br>
+          Facilities: 🛏️ 🍲 🌳<br><br>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+        <div class="card">
+          <h3>Adventure Package</h3>
+          Price: ₹3,000 / night<br>
+          Facilities: 🚤 🏕️ 🎣<br><br>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAYMENTS ===== -->
+    <section class="section" id="payments">
+      <h2>Payment History</h2>
+      <div class="card">
+        Booking ID: 101 | Amount: ₹5,000 | Paid on: 05 Aug 2025
+      </div>
+      <div class="card">
+        Booking ID: 102 | Amount: ₹3,000 | Pending ❌
+      </div>
+    </section>
+
+    <!-- ===== NOTIFICATIONS ===== -->
+    <section class="section" id="notifications">
+      <h2>Notifications</h2>
+      <div class="card">Your booking #101 has been approved!</div>
+      <div class="card">Special Offer: 10% off on Adventure Package</div>
+    </section>
+
+    <!-- ===== FEEDBACK ===== -->
+    <section class="section" id="feedback">
+      <h2>Feedback</h2>
+      <a href="#" class="btn">Give Feedback</a>
+    </section>
+
+    <!-- ===== SUPPORT ===== -->
+    <section class="section" id="support">
+      <h2>Support</h2>
+      <p>Need help? Contact us at <strong>+91-9876543210</strong> or 
+         <a href="mailto:support@shantubag.com">support@shantubag.com</a>
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>

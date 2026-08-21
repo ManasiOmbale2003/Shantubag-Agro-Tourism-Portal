@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shantubag Agro Tourism - Feedback Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #a8edea, #fed6e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .feedback-container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        .feedback-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feedback-container label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .feedback-container input[type="text"],
+        .feedback-container input[type="email"],
+        .feedback-container input[type="date"],
+        .feedback-container textarea,
+        .feedback-container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .feedback-container textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .feedback-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #56ab2f;
+            background-image: linear-gradient(315deg, #56ab2f 0%, #a8e063 74%);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .feedback-container button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-container">
+    <h2>Shantubag Feedback Form</h2>
+    <form action="submit_feedback.php" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="visit_date">Date of Visit:</label>
+        <input type="date" id="visit_date" name="visit_date" required>
+
+        <label for="rating">Overall Experience:</label>
+        <select id="rating" name="rating" required>
+            <option value="">Select</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select>
+
+        <label for="suggestions">Suggestions / Comments:</label>
+        <textarea id="suggestions" name="suggestions" placeholder="Share your thoughts..."></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+
+</body>
+</html>

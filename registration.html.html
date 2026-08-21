@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration - Shantubag Agro Tourism</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #a8edea, #fed6e3);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 450px;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 28px;
+        color: #ff69b4;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff69b4;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff1493;
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #ff69b4;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .error {
+        color: #e74c3c;
+        font-size: 13px;
+        margin-top: -12px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 500px) {
+        .form-container {
+            padding: 30px 20px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>User Registration</h2>
+    <form method="POST" action="register.php">
+  <input type="text" name="name" placeholder="Full Name" required><br>
+  <input type="email" name="email" placeholder="Email" required><br>
+  <input type="text" name="phone" placeholder="Phone" required><br>
+  <input type="password" name="password" placeholder="Password" required><br>
+  <input type="text" name="address" placeholder="Address"><br>
+  <button type="submit">Register</button>
+</form>
+
+<p>Already have an account? <a href="login.php">Login Here</a></p>
+    <div class="login-link">
+        Already have an account? <a href="login.php">Login here</a>
+    </div>
+</div>
+
+<script>
+function validateForm() {
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm_password").value;
+    const phone = document.getElementById("phone").value;
+
+    let valid = true;
+
+    // Clear previous errors
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("phoneError").innerText = "";
+
+    // Password match check
+    if (password !== confirmPassword) {
+        document.getElementById("passwordError").innerText = "Passwords do not match.";
+        valid = false;
+    }
+
+    // Phone number check
+    if (!/^\d{10}$/.test(phone)) {
+        document.getElementById("phoneError").innerText = "Please enter a valid 10-digit phone number.";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facilities - Shantubag Agro Tourism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #16a085;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #1abc9c;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .facility-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .facility-card h3 {
+      color: #16a085;
+      margin-bottom: 10px;
+    }
+
+    .facility-card p {
+      color: #555;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .facility-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shantubag Agro Tourism</h1>
+  <p>Our Farm Facilities</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="Booking.php">Bookings</a>
+  <a href="Contact.php">Contact Us</a>
+  <a href="facilities.html" class="active">Facilities</a>
+  <a href="registration.html">registration</a>
+</nav>
+
+<div class="container">
+  <h2>Facilities at Shantubag</h2>
+  <div class="facilities-grid">
+    <div class="facility-card">
+      <h3>Eco-Friendly Cottages</h3>
+      <p>Stay in traditional yet comfortable cottages surrounded by nature.</p>
+    </div>
+    <div class="facility-card">
+      <h3>Organic Farming</h3>
+      <p>Experience hands-on organic farming with seasonal crops and vegetables.</p>
+    </div>
+    <div class="facility-card">
+      <h3>Bullock Cart Ride</h3>
+      <p>Enjoy a traditional bullock cart ride through the village and farmlands.</p>
+    </div>
+    <div class="facility-card">
+      <h3>Local Maharashtrian Food</h3>
+      <p>Relish freshly cooked, authentic village meals with natural ingredients.</p>
+    </div>
+    <div class="facility-card">
+      <h3>Children’s Play Area</h3>
+      <p>Safe and fun area for kids with swings, slides, and natural activities.</p>
+    </div>
+    <div class="facility-card">
+      <h3>Campfire & Music</h3>
+      <p>Evening campfires with folk music and traditional village stories.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Shantubag Agro Tourism. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

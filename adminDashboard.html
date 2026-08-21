@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Shantubag Agro Tourism</title>
+<style>
+    body {
+        margin: 0;
+        background: #f4f9f9;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+    header {
+        background: #d32f2f; /* Red header for admin */
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 1.6em;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px;
+        gap: 20px;
+    }
+    .card {
+        background: white;
+        width: 230px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #333;
+    }
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+        margin: 0 0 10px 0;
+        color: #d32f2f;
+    }
+    .card p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    Admin Dashboard - Shantubag Agro Tourism
+</header>
+
+<div class="container">
+    <a href="#" class="card">
+        <h3>📦 Manage Packages</h3>
+        <p>Add, update, or delete farm stay packages</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>📑 Manage Bookings</h3>
+        <p>View and confirm user bookings</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>👥 Manage Users</h3>
+        <p>View and control registered users</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>💳 Manage Payments</h3>
+        <p>Track and verify all transactions</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>🖼️ Manage Gallery</h3>
+        <p>Upload or remove images</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>🏠 Manage Facilities</h3>
+        <p>Add or edit facilities info</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>⭐ Manage Feedback</h3>
+        <p>View and reply to user feedback</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>📊 Reports</h3>
+        <p>Generate booking and revenue reports</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>⚙️ Settings</h3>
+        <p>Change admin settings & preferences</p>
+    </a>
+
+    <a href="#" class="card">
+        <h3>🚪 Logout</h3>
+        <p>Sign out from admin account</p>
+    </a>
+</div>
+
+</body>
+</html>
